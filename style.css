@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* CSS Document */
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Play', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:600;
+}
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+a:focus, a:active {
+	color: #FFF;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+	color:#000;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+body{
+
+}
+header {
+	
+}
+	.main-menu{
+	 	height:68px; background: rgba(0,0,0,0.80); position:fixed; width:100%;
+		z-index:100;
+	}
+		.main-menu nav ul{
+			float:right; 
+		}
+			.main-menu nav ul li{
+				float:left; 
+			}
+				.p-menu a{
+					 color:#FFF; font-size:17px; font-weight:300; line-height:60px; display:block; padding:0 20px;
+					 border-top:4px solid rgba(255,255,255,0.0);
+					 border-bottom:4px solid rgba(255,255,255,0.0);
+					 transition: 0.2s;
+				}
+				.p-menu a:hover,
+				.p-menu a.active{
+					border-bottom:4px solid rgba(255,255,255,1.0);
+					text-decoration:none;
+					transition: 0.2s;
+				}
+		.kup-menu a{
+			box-sizing:border-box;
+			margin-top:17px;
+			display:block;
+			border:2px solid #FFFFFF; 
+			padding:5px 5px;
+			font-size:17px; font-weight:bold;
+			margin-right:20px; margin-left:20px;
+			transition: 0.2s;
+			
+		}
+		.kup-menu a:hover,
+		.kup-menu a.active{
+			background:rgba(255,255,255,1.00);
+			color:rgba(0,0,0,1.00);
+			text-decoration:none;
+			transition: 0.2s;
+		}
+	.logo{
+		position:absolute; height:62px; left:10px; margin:3px 0 0 3px;
+	}
+	.kont1{
+		position:absolute; left:180px; top: 10px;
+		display:block; 
+		color:#fff; 
+	}
+		.kont1 p{
+			margin-bottom:5px; 
+		}
+		.kont1 img{
+			vertical-align: middle; margin-right:5px;
+			width:20px;
+		}
+	.kont2{
+		position:absolute; left:400px; top: 10px;
+		display:block; 
+		color:#fff; 
+	}
+		.kont2 p{
+			margin-bottom:5px; 
+		}
+		.kont2 img{
+			vertical-align: middle; margin-right:5px;
+			width:20px;
+		}
+	.my-slider{
+		box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+	}
+		.my-slider ul{
+			text-align:center;
+		}
+		.my-slider ul li{
+			 position:relative; width:100%; z-index:-1; font-size:0;
+		}
+		.name{
+			position:absolute; top:36%; left: 10%; text-align:left; 
+		}
+			.name h1{
+				font-size:70px; font-weight:bold;
+				color:rgba(0,0,0,1.00); 
+			}
+			.name h2{
+				font-size:20px; 
+				color:rgba(0,0,0,1.00);
+			}
+		.unslider-nav{
+			position:relative; top:-30px;
+		}
+	.all_content{
+		
+	}
+		.inbox{
+			color:#000; padding-top:10px; width:80%; margin:40px auto 0 auto;
+		}
+				
+			.main_block{
+			 	margin:0 auto;
+			}
+
+			.block{
+				float:left; width:23.5%; margin-left:2%; margin-top: 10px; box-sizing:border-box;
+				border:3px solid #000; color:#000000;
+				padding: 10px; box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+			}
+
+				.block_img{
+					width:15%; margin:0 auto;
+				}
+				.block h2{
+					font-size:20px; font-weight:bold;
+				}
+				block p{
+				}
+			.block_left{
+				float:left; width:23.5%; margin-top: 10px; box-sizing:border-box;
+				border:3px solid #000;
+				padding: 10px; box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+			}
+
+				.block_left h2{
+					font-size:20px; font-weight:bold;
+				}
+				block_left p{
+				}
+		.blocks{
+			overflow:hidden; padding-bottom:10px;
+		}
+			.price{
+				 padding:10px; display:block; margin:10px 0;  
+				
+			}
+			#applicationName, #applicationEmail, #applicationTelephone{
+				display:block;
+				margin: 0 auto 0 auto;
+				width: 40%;
+				height: 73px;
+				background: #fff;
+				margin-top: 25px;
+				border: 2px solid #000;
+				
+				text-align: center;
+				color: #000;
+				font-size: 24px;
+				box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+			}
+			/*Стили полей при клике по ним*/
+			#applicationName:focus, #applicationEmail:focus, #applicationTelephone:focus {
+				
+			}
+			 
+			/*Стили текста, выводящегося в placeholder*/
+			::-webkit-input-placeholder {
+				color: #efefef;
+				
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+			}
+			 
+			::-moz-placeholder  {
+				color: #fff;
+				
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+			}  /* Firefox 19+ */
+			 
+			:-moz-placeholder {
+				color: #fff;
+				
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+			}  /* Firefox 18- */
+			 
+			:-ms-input-placeholder {
+				color: #fff;
+				
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+			}
+			/*Стили для кнопки*/
+			.applicationButton {
+				display:block;
+				margin: 25px auto 0 auto;
+				background: #000; color:#fff; border: 2px solid #fff;
+				width: 45%;
+				height: 73px;
+				font-size: 24px;
+				font-weight:bold;
+				text-transform: uppercase;
+				cursor: pointer; transition: .1s;
+				box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+			}
+				/*.applicationButton:hover{
+					border:  solid #fff; transition: .1s;
+				}*/
+ 
+			::placeholder {
+				color: #000;
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+			}
+		.about{
+			margin-top:65px;
+			overflow:hidden;
+			position: relative;
+			box-shadow: 0 -6px 12px -3px rgba(0,0,0,1.00), 0 6px 12px -3px rgba(0,0,0,1.00);
+			font-size:0;
+			
+		}
+
+				.vid{
+					position: absolute; top:15%; left:19.5%;
+					width:60%; 
+				}
+				.vid img{
+					cursor:pointer;
+				}
+		.delivery{
+			width:80%; margin:0 auto; overflow: hidden; padding-top:80px;
+		}
+			.del_block{
+				float:left; width:23.5%; margin-left:2%; box-sizing:border-box; position:relative;
+				border:3px solid #000; color:#000000; padding:10px; box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+			}
+			.del_block_left{
+				float:left; width:23.5%; box-sizing:border-box;
+				border:3px solid #000; color:#000000; padding:10px;
+				box-shadow: 0 6px 12px -3px rgba(0,0,0,1.00);
+			}
+			.del_block_img{
+				margin:0 auto; width:50%; 
+			}
+
+			.del_block_price{
+				width:90%; margin:0 auto; text-align:center;
+				margin-top:10px; padding-top:10px;
+				border-top: 0.5px solid #585858;
+				font-size:24px; font-weight:bold;
+			}
+		.fot{
+			margin-top:80px; box-shadow: 0 -6px 12px -3px rgba(0,0,0,1.00), 0 6px 12px -3px rgba(0,0,0,1.00);
+			background: url(img/dfgd.jpg); background-size: 100%; overflow:hidden; margin-bottom:10px;
+
+		}
+			.kup{
+				padding: 70px 0;
+				text-align:center; 
+				display:block;
+				box-sizing:border-box; font-weight:bold; width:100%; font-size:40px;
+				color:rgba(255,255,255,1.00);  
+				text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+			}
+		footer{
+			font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			color:#000; text-align:center;
+		}
+
+				
+
